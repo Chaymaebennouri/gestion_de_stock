@@ -1,10 +1,5 @@
 <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
@@ -12,11 +7,32 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            <!-- Name -->
+            <!-- Nom -->
             <div>
-                <x-label for="name" :value="__('Name')" />
+                <x-label for="nom" :value="__('Nom')" />
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <x-input id="nom" class="block mt-1 w-full" type="text" name="nom" :value="old('nom')" required autofocus />
+            </div>
+            
+            <!-- Prenom -->
+            <div>
+                <x-label for="prenom" :value="__('prenom')" />
+
+                <x-input id="prenom" class="block mt-1 w-full" type="text" name="prenom" :value="old('prenom')" required autofocus />
+            </div>
+            
+            <!-- iddept -->
+            <div>
+                <x-label for="iddept" :value="__('iddept')" />
+
+                <x-input id="iddept" class="block mt-1 w-full" type="text" name="iddept" :value="old('iddept')" required autofocus />
+            </div>
+            
+            <!-- fonction -->
+            <div>
+                <x-label for="fonction" :value="__('fonction')" />
+
+                <x-input id="fonction" class="block mt-1 w-full" type="text" name="fonction" :value="old('fonction')" required autofocus />
             </div>
 
             <!-- Email Address -->
