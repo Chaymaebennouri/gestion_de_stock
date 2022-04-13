@@ -23,9 +23,9 @@
             
             <!-- iddept -->
             <div>
-                <x-label for="iddept" :value="__('iddept')" />
+                <x-label for="IDdept" :value="__('IDdept')" />
 
-                <x-input id="iddept" class="block mt-1 w-full" type="text" name="iddept" :value="old('iddept')" required autofocus />
+                <x-input id="IDdept" class="block mt-1 w-full" type="text" name="IDdept" :value="old('IDdept')" required autofocus />
             </div>
             
             <!-- fonction -->
@@ -33,6 +33,13 @@
                 <x-label for="fonction" :value="__('fonction')" />
 
                 <x-input id="fonction" class="block mt-1 w-full" type="text" name="fonction" :value="old('fonction')" required autofocus />
+            </div>
+
+            <!-- telephone -->
+            <div>
+                <x-label for="telephone" :value="__('telephone')" />
+
+                <x-input id="telephone" class="block mt-1 w-full" type="text" name="telephone" :value="old('')" required autofocus />
             </div>
 
             <!-- Email Address -->

@@ -38,6 +38,7 @@ class RegisteredUserController extends Controller
             'prenom' => ['required', 'string', 'max:255'],
             'IDdept' => ['required', 'int', 'max:255'],
             'fonction' => ['required', 'string', 'max:255'],
+            'telephone' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
@@ -47,6 +48,7 @@ class RegisteredUserController extends Controller
             'prenom' => $request->prenom,
             'IDdept' => $request->IDdept,
             'fonction' => $request->fonction,
+            'telephone' => $request->telephone,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);

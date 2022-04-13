@@ -17,8 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('prenom');
-            $table->int("IDdept");
+            $table->integer('IDdept');
             $table->string('fonction');
+            $table->string('telephone');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
