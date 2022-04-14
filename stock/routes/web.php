@@ -22,3 +22,15 @@ Route::get('/home', function () {
 })->middleware(['auth'])->name('home');
 
 require __DIR__.'/auth.php';
+
+Route::get('/categorie',function(){
+    return view('categorie');
+})->middleware(['auth'])->name('categorie');
+
+require __DIR__.'/auth.php';
+
+Route::get('/contact',function(){
+    return view('contact');
+})->middleware(['auth'])->name('contact');
+
+require __DIR__.'/auth.php';
