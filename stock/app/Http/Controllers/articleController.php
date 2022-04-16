@@ -11,4 +11,9 @@ class articleController extends Controller
         $articles=article::orderby('id','DESC')->get();
         return view('articles.index',compact('tasks'));
     }
+    public function addArticle(Request $request){
+        article::create($request->all());
+         return redirect('/');
+
+    }
 }
