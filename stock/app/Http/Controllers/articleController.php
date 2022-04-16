@@ -9,7 +9,6 @@ class articleController extends Controller
     public function index()
     {
         $articles=article::orderby('id','DESC')->get();
-        
         return view('articles.index',compact('tasks'));
     }
 }
